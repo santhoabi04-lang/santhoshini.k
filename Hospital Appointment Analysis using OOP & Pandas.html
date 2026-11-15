@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:8000/index.html -->
+<html lang="en" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Appointment Analysis using OOP &amp; Pandas</title>
+  <meta name="description" content="An educational and portfolio showcase of clinical hospital appointment analysis utilizing Object-Oriented Programming (OOP) and Pandas data analytics.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Hospital Appointment Analysis using OOP &amp; Pandas_files/css2" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="./Hospital Appointment Analysis using OOP &amp; Pandas_files/all.min.css">
+
+  <!-- Prism.js Syntax Highlighting Theme -->
+  <link rel="stylesheet" href="./Hospital Appointment Analysis using OOP &amp; Pandas_files/prism-tomorrow.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./Hospital Appointment Analysis using OOP &amp; Pandas_files/styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Sticky Navigation Bar
+       ======================================================================== -->
+  <header class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="http://localhost:8000/index.html#" class="nav-brand">
+        <div class="nav-brand-icon">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <span>Medi<span>Pulse</span> Analytics</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="http://localhost:8000/index.html#about" class="nav-link">About</a>
+        <a href="http://localhost:8000/index.html#oop-design" class="nav-link">OOP Design</a>
+        <a href="http://localhost:8000/index.html#pandas-analysis" class="nav-link">Pandas ETL</a>
+        <a href="http://localhost:8000/index.html#dashboard" class="nav-link">Dashboard</a>
+        <a href="http://localhost:8000/index.html#insights" class="nav-link">Key Insights</a>
+        <a href="http://localhost:8000/index.html#tech-stack" class="nav-link">Tech Stack</a>
+        <a href="http://localhost:8000/index.html#future-scope" class="nav-link">Future Scope</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark/Light Mode Switcher -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode" fdprocessedid="gyx7e9">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <a href="http://localhost:8000/index.html#dashboard" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Live Demo</span>
+        </a>
+
+        <!-- Mobile Nav Toggle -->
+        <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         2. Hero Section
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-content">
+        <div class="hero-pill">
+          <span class="hero-pill-pulse"></span>
+          <span>Educational &amp; Portfolio Project Showcase</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hospital Appointment Analysis <br>
+          <span class="gradient-text">using OOP &amp; Pandas</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Bridging robust Object-Oriented domain architecture with high-performance Pandas analytics to evaluate clinical throughput, doctor scheduling capacity, and patient no-show behaviors.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="http://localhost:8000/index.html#dashboard" class="btn btn-primary">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>View Interactive Analysis</span>
+          </a>
+          <a href="http://localhost:8000/index.html#oop-design" class="btn btn-secondary">
+            <i class="fa-solid fa-code"></i>
+            <span>See OOP Architecture</span>
+          </a>
+        </div>
+
+        <!-- Live Hero KPI Badges -->
+        <div class="hero-stats-grid">
+          <div class="hero-stat-card fade-in-scroll visible">
+            <div class="hero-stat-value">60+</div>
+            <div class="hero-stat-label">Structured Records</div>
+          </div>
+          <div class="hero-stat-card fade-in-scroll visible">
+            <div class="hero-stat-value">6</div>
+            <div class="hero-stat-label">Medical Specialties</div>
+          </div>
+          <div class="hero-stat-card fade-in-scroll visible">
+            <div class="hero-stat-value"><span>4</span> Core</div>
+            <div class="hero-stat-label">Domain OOP Classes</div>
+          </div>
+          <div class="hero-stat-card fade-in-scroll visible">
+            <div class="hero-stat-value">18.3%</div>
+            <div class="hero-stat-label">Baseline No-Show Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. About the Project Section
+         ======================================================================== -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-header fade-in-scroll visible">
+          <div class="section-badge">Project Foundation</div>
+          <h2 class="section-title">Clinical Context &amp; Objectives</h2>
+          <p class="section-subtitle">
+            Unscheduled patient absenteeism and unbalanced clinical queues severely degrade healthcare delivery efficiency and inflate provider overhead.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Problem Statement -->
+          <div class="about-card fade-in-scroll visible">
+            <div class="about-card-header">
+              <div class="about-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <h3>The Problem Statement</h3>
+            </div>
+            <p>
+              Modern healthcare facilities encounter systemic operational bottlenecks: high patient no-show rates leave physician slots empty, while unbalanced scheduling causes prolonged waiting room times in high-demand departments like Orthopedics and Neurology.
+            </p>
+            <div class="about-list">
+              <div class="about-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Average 15%–25% no-show frequency causes severe revenue leakage.</span>
+              </div>
+              <div class="about-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Physician capacity imbalances lead to clinician burnout or underutilization.</span>
+              </div>
+              <div class="about-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Lack of unified OOP data pipelines slows clinical decision-making.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Objectives -->
+          <div class="about-card fade-in-scroll visible">
+            <div class="about-card-header">
+              <div class="about-icon"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Project Objectives</h3>
+            </div>
+            <p>
+              This showcase demonstrates how software design principles (OOP) merge seamlessly with data science workflows (Pandas) to transform raw appointment logs into actionable operational intelligence.
+            </p>
+            <div class="about-list">
+              <div class="about-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Model real-world entities cleanly using <strong>Encapsulation, Inheritance, and Abstraction</strong>.</span>
+              </div>
+              <div class="about-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Automate high-speed <strong>Pandas ETL pipelines</strong> for data cleaning and aggregation.</span>
+              </div>
+              <div class="about-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Surface real-time operational insights via dynamic visual dashboard controls.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dataset Description & Schema -->
+        <div class="dataset-container fade-in-scroll visible">
+          <div class="dataset-header">
+            <div>
+              <h3><i class="fa-solid fa-database" style="color:var(--primary); margin-right:0.5rem"></i> Clinical Dataset Schema</h3>
+              <p style="color:var(--text-muted); font-size:0.875rem; margin-top:0.25rem;">
+                Sample dataset simulating an ambulatory hospital appointment ledger with transactional fields.
+              </p>
+            </div>
+            <span class="badge-tag type-str"><i class="fa-solid fa-table"></i> Synthetic Clinical Registry</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="dataset-table">
+              <thead>
+                <tr>
+                  <th>Field Name</th>
+                  <th>Python Dtype</th>
+                  <th>Clinical Description</th>
+                  <th>Sample Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>appointment_id</code></td>
+                  <td><span class="badge-tag type-str">str (UUID/ID)</span></td>
+                  <td>Unique transactional identifier for the scheduled consultation</td>
+                  <td><code>"APT-1001"</code></td>
+                </tr>
+                <tr>
+                  <td><code>patient_id</code></td>
+                  <td><span class="badge-tag type-str">str (Encrypted)</span></td>
+                  <td>Anonymized patient unique identifier compliant with HIPAA standards</td>
+                  <td><code>"P-101"</code></td>
+                </tr>
+                <tr>
+                  <td><code>doctor</code></td>
+                  <td><span class="badge-tag type-str">str (Categorical)</span></td>
+                  <td>Assigned attending physician name and title</td>
+                  <td><code>"Dr. Sarah Chen"</code></td>
+                </tr>
+                <tr>
+                  <td><code>department</code></td>
+                  <td><span class="badge-tag type-str">str (Category)</span></td>
+                  <td>Clinical specialty division (Cardiology, Pediatrics, Oncology, etc.)</td>
+                  <td><code>"Cardiology"</code></td>
+                </tr>
+                <tr>
+                  <td><code>appointment_date</code></td>
+                  <td><span class="badge-tag type-dt">datetime64[ns]</span></td>
+                  <td>Date and schedule timestamp of the patient visit</td>
+                  <td><code>2024-01-05</code></td>
+                </tr>
+                <tr>
+                  <td><code>status</code></td>
+                  <td><span class="badge-tag type-str">category</span></td>
+                  <td>Outcome state: <strong>Completed</strong>, <strong>No-Show</strong>, or <strong>Cancelled</strong></td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                </tr>
+                <tr>
+                  <td><code>wait_time</code></td>
+                  <td><span class="badge-tag type-num">float64</span></td>
+                  <td>Patient waiting time (minutes) from check-in to exam room</td>
+                  <td><code>18.0 min</code></td>
+                </tr>
+                <tr>
+                  <td><code>fee</code></td>
+                  <td><span class="badge-tag type-num">float64</span></td>
+                  <td>Billing fee charged for the specific consultation slot</td>
+                  <td><code>$250.00</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. OOP Design Section
+         ======================================================================== -->
+    <section class="section" id="oop-design">
+      <div class="container">
+        <div class="section-header fade-in-scroll visible">
+          <div class="section-badge">System Architecture</div>
+          <h2 class="section-title">Object-Oriented Design (OOP)</h2>
+          <p class="section-subtitle">
+            A modular class hierarchy ensures strict type boundaries, data integrity, and natural mapping to clinical entities before loading into analytical DataFrames.
+          </p>
+        </div>
+
+        <!-- Class Structure UML Cards -->
+        <div class="oop-classes-grid">
+          <!-- Class 1: Patient -->
+          <div class="oop-class-card fade-in-scroll visible" onclick="selectOOPClass('Patient')">
+            <span class="oop-class-badge">Domain Entity</span>
+            <div class="oop-class-name">class Patient</div>
+            <div class="oop-class-desc">Represents healthcare recipients with encapsulated medical and contact attributes.</div>
+            
+            <div class="oop-section-title">Attributes</div>
+            <ul class="oop-list">
+              <li>patient_id: str</li>
+              <li>name: str</li>
+              <li>age: int</li>
+              <li>history: List[str]</li>
+            </ul>
+
+            <div class="oop-section-title">Methods</div>
+            <ul class="oop-list">
+              <li>get_demographics()</li>
+              <li>add_medical_record()</li>
+              <li>to_dict() -&gt; dict</li>
+            </ul>
+          </div>
+
+          <!-- Class 2: Doctor -->
+          <div class="oop-class-card fade-in-scroll visible" onclick="selectOOPClass('Doctor')">
+            <span class="oop-class-badge">Provider Entity</span>
+            <div class="oop-class-name">class Doctor</div>
+            <div class="oop-class-desc">Models clinicians managing departmental specialty, hourly schedule, and patient limits.</div>
+
+            <div class="oop-section-title">Attributes</div>
+            <ul class="oop-list">
+              <li>doctor_id: str</li>
+              <li>name: str</li>
+              <li>department: str</li>
+              <li>daily_capacity: int</li>
+            </ul>
+
+            <div class="oop-section-title">Methods</div>
+            <ul class="oop-list">
+              <li>is_slot_available()</li>
+              <li>record_consultation()</li>
+              <li>get_summary() -&gt; dict</li>
+            </ul>
+          </div>
+
+          <!-- Class 3: Appointment -->
+          <div class="oop-class-card fade-in-scroll visible" onclick="selectOOPClass('Appointment')">
+            <span class="oop-class-badge">Aggregate Entity</span>
+            <div class="oop-class-name">class Appointment</div>
+            <div class="oop-class-desc">Associates Patient and Doctor instances with date, status lifecycle, and wait times.</div>
+
+            <div class="oop-section-title">Attributes</div>
+            <ul class="oop-list">
+              <li>appointment_id: str</li>
+              <li>patient: Patient</li>
+              <li>doctor: Doctor</li>
+              <li>status: StatusEnum</li>
+              <li>wait_time: float</li>
+              <li>fee: float</li>
+            </ul>
+
+            <div class="oop-section-title">Methods</div>
+            <ul class="oop-list">
+              <li>mark_completed(wait)</li>
+              <li>mark_no_show()</li>
+              <li>reschedule(new_date)</li>
+            </ul>
+          </div>
+
+          <!-- Class 4: HospitalAnalyzer -->
+          <div class="oop-class-card fade-in-scroll visible" onclick="selectOOPClass('HospitalAnalyzer')">
+            <span class="oop-class-badge">Analytics Engine</span>
+            <div class="oop-class-name">class HospitalAnalyzer</div>
+            <div class="oop-class-desc">Aggregates appointment collections, converting instances to vectorized Pandas DataFrames.</div>
+
+            <div class="oop-section-title">Attributes</div>
+            <ul class="oop-list">
+              <li>appointments: list</li>
+              <li>df: pd.DataFrame</li>
+              <li>cache: dict</li>
+            </ul>
+
+            <div class="oop-section-title">Methods</div>
+            <ul class="oop-list">
+              <li>ingest_appointments()</li>
+              <li>calc_noshow_rate()</li>
+              <li>dept_workload_matrix()</li>
+              <li>export_kpis() -&gt; json</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Interactive OOP Sandbox Inspector -->
+        <div class="oop-interactive-box fade-in-scroll visible">
+          <div class="oop-interactive-header">
+            <div>
+              <h4 style="font-size:1.15rem; font-weight:800; color:var(--text-main); display:flex; align-items:center; gap:0.5rem;">
+                <i class="fa-solid fa-terminal" style="color:var(--primary)"></i>
+                <span>Live Interactive OOP Class Inspector</span>
+              </h4>
+              <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.25rem;">
+                Click any class tab to inspect its real-time Python instantiation and encapsulated properties.
+              </p>
+            </div>
+            <div class="oop-tab-buttons">
+              <button class="oop-tab-btn active" onclick="selectOOPClass('Patient')" fdprocessedid="cwfdn">Patient</button>
+              <button class="oop-tab-btn" onclick="selectOOPClass('Doctor')" fdprocessedid="9r6i0h">Doctor</button>
+              <button class="oop-tab-btn" onclick="selectOOPClass('Appointment')" fdprocessedid="7u84zb">Appointment</button>
+              <button class="oop-tab-btn" onclick="selectOOPClass('HospitalAnalyzer')" fdprocessedid="o31oo9">HospitalAnalyzer</button>
+            </div>
+          </div>
+          <div class="oop-sandbox-output" id="oop-sandbox-display"><pre style="margin:0; font-family:inherit; white-space:pre-wrap;"># 1. Instantiating Patient domain object with encapsulated history
+pat = Patient(person_id="P-101", name="Alice Smith", age=45, contact="555-0199")
+pat.add_history("Hypertension (2021)")
+pat.add_history("Type-2 Diabetes (2023)")
+
+# Output serialized state:
+print(pat.get_details())
+&gt;&gt;&gt; {'id': 'P-101', 'name': 'Alice Smith', 'age': 45, 'history_count': 2}</pre></div>
+        </div>
+
+        <!-- OOP Core Principles Explained with Code Snippets -->
+        <div class="oop-principles-grid">
+          <!-- Principle 1: Encapsulation -->
+          <div class="principle-card fade-in-scroll visible">
+            <div class="principle-header">
+              <div class="principle-badge">Core Principle 01</div>
+              <h4>Encapsulation</h4>
+              <p>Protecting internal states with private attributes and defensive property setters.</p>
+            </div>
+            <div class="code-container">
+              <div class="code-header">
+                <span class="code-lang">Python 3.11</span>
+                <button class="copy-btn" fdprocessedid="2gg3rcf"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Appointment</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> apt_id<span class="token punctuation">,</span> patient<span class="token punctuation">,</span> doctor<span class="token punctuation">,</span> fee<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>apt_id <span class="token operator">=</span> apt_id
+        self<span class="token punctuation">.</span>_patient <span class="token operator">=</span> patient
+        self<span class="token punctuation">.</span>_doctor <span class="token operator">=</span> doctor
+        self<span class="token punctuation">.</span>__wait_time <span class="token operator">=</span> <span class="token number">0.0</span>  <span class="token comment"># Private state</span>
+        self<span class="token punctuation">.</span>_fee <span class="token operator">=</span> fee
+
+    <span class="token decorator annotation punctuation">@property</span>
+    <span class="token keyword">def</span> <span class="token function">wait_time</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">float</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>__wait_time
+
+    <span class="token decorator annotation punctuation">@wait_time<span class="token punctuation">.</span>setter</span>
+    <span class="token keyword">def</span> <span class="token function">wait_time</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> minutes<span class="token punctuation">:</span> <span class="token builtin">float</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> minutes <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">"Wait time cannot be negative."</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>__wait_time <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>minutes<span class="token punctuation">)</span></code></pre>
+            </div>
+          </div>
+
+          <!-- Principle 2: Inheritance & Polymorphism -->
+          <div class="principle-card fade-in-scroll visible">
+            <div class="principle-header">
+              <div class="principle-badge">Core Principle 02</div>
+              <h4>Inheritance &amp; Polymorphism</h4>
+              <p>Specializing clinical individuals from a common base entity with custom behaviors.</p>
+            </div>
+            <div class="code-container">
+              <div class="code-header">
+                <span class="code-lang">Python 3.11</span>
+                <button class="copy-btn" fdprocessedid="87c4fr"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> person_id<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>person_id <span class="token operator">=</span> person_id
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+
+    <span class="token keyword">def</span> <span class="token function">get_role_details</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">dict</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">"id"</span><span class="token punctuation">:</span> self<span class="token punctuation">.</span>person_id<span class="token punctuation">,</span> <span class="token string">"name"</span><span class="token punctuation">:</span> self<span class="token punctuation">.</span>name<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Doctor</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> doc_id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> specialty<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>doc_id<span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>specialty <span class="token operator">=</span> specialty
+
+    <span class="token comment"># Polymorphic method override</span>
+    <span class="token keyword">def</span> <span class="token function">get_role_details</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">dict</span><span class="token punctuation">:</span>
+        base <span class="token operator">=</span> <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>get_role_details<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        base<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"Doctor"</span><span class="token punctuation">,</span> <span class="token string">"specialty"</span><span class="token punctuation">:</span> self<span class="token punctuation">.</span>specialty<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> base</code></pre>
+            </div>
+          </div>
+
+          <!-- Principle 3: Abstraction -->
+          <div class="principle-card fade-in-scroll visible">
+            <div class="principle-header">
+              <div class="principle-badge">Core Principle 03</div>
+              <h4>Abstraction</h4>
+              <p>Standardizing analytics contracts via Python ABC (Abstract Base Classes).</p>
+            </div>
+            <div class="code-container">
+              <div class="code-header">
+                <span class="code-lang">Python 3.11</span>
+                <button class="copy-btn" fdprocessedid="b30fz"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">from</span> abc <span class="token keyword">import</span> ABC<span class="token punctuation">,</span> abstractmethod
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+<span class="token keyword">class</span> <span class="token class-name">AbstractHospitalAnalyzer</span><span class="token punctuation">(</span>ABC<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">compute_kpis</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">dict</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""Calculate executive metrics."""</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">generate_department_summary</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""Aggregate department utilization."""</span>
+        <span class="token keyword">pass</span>
+
+<span class="token keyword">class</span> <span class="token class-name">HospitalAnalyzer</span><span class="token punctuation">(</span>AbstractHospitalAnalyzer<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">compute_kpis</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">dict</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            <span class="token string">"total"</span><span class="token punctuation">:</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>df<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string">"no_show_rate"</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>df<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'No-Show'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+        <span class="token punctuation">}</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. Pandas Analysis Section
+         ======================================================================== -->
+    <section class="section section-alt" id="pandas-analysis">
+      <div class="container">
+        <div class="section-header fade-in-scroll visible">
+          <div class="section-badge">Data Processing Pipeline</div>
+          <h2 class="section-title">Vectorized Pandas Analytics</h2>
+          <p class="section-subtitle">
+            Exploring the 5-stage transformation pipeline from raw nested OOP objects into high-throughput Pandas DataFrame operations.
+          </p>
+        </div>
+
+        <div class="pandas-steps-grid">
+          <!-- Step 1: Data Cleaning & Parsing -->
+          <div class="pandas-card fade-in-scroll visible">
+            <div class="pandas-card-header">
+              <div class="pandas-step-badge"><i class="fa-solid fa-broom"></i> Stage 01</div>
+              <h3>Data Ingestion &amp; Cleaning</h3>
+              <p>Type coercion, parsing dates into datetime indices, and imputing null values.</p>
+            </div>
+            <div class="code-container">
+              <div class="code-header">
+                <span class="code-lang">pandas_cleaning.py</span>
+                <button class="copy-btn" fdprocessedid="0clt3m"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+<span class="token keyword">def</span> <span class="token function">clean_appointment_dataset</span><span class="token punctuation">(</span>raw_records<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">:</span>
+    df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>raw_records<span class="token punctuation">)</span>
+
+    <span class="token comment"># 1. Datetime parsing with temporal features</span>
+    df<span class="token punctuation">[</span><span class="token string">'appointment_date'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>to_datetime<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">'date'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    df<span class="token punctuation">[</span><span class="token string">'month'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'appointment_date'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>dt<span class="token punctuation">.</span>month_name<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    df<span class="token punctuation">[</span><span class="token string">'day_of_week'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'appointment_date'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>dt<span class="token punctuation">.</span>day_name<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 2. Categorical optimization for memory efficiency</span>
+    df<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token string">'category'</span><span class="token punctuation">)</span>
+    df<span class="token punctuation">[</span><span class="token string">'department'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'department'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token string">'category'</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 3. Defensive sanitization: zero out wait time for no-shows</span>
+    df<span class="token punctuation">.</span>loc<span class="token punctuation">[</span>df<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'Completed'</span><span class="token punctuation">,</span> <span class="token string">'wait_time'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0.0</span>
+    <span class="token keyword">return</span> df</code></pre>
+            </div>
+          </div>
+
+          <!-- Step 2: Boolean Filtering & Slicing -->
+          <div class="pandas-card fade-in-scroll visible">
+            <div class="pandas-card-header">
+              <div class="pandas-step-badge"><i class="fa-solid fa-filter"></i> Stage 02</div>
+              <h3>Boolean Indexing &amp; Filtering</h3>
+              <p>Fast vector masks to isolate chronic no-shows and outpatient bottlenecks.</p>
+            </div>
+            <div class="code-container">
+              <div class="code-header">
+                <span class="code-lang">pandas_filtering.py</span>
+                <button class="copy-btn" fdprocessedid="o4g80r"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre class="language-python" tabindex="0"><code class="language-python"><span class="token comment"># Isolate severe delays: completed visits exceeding 30-min threshold</span>
+bottlenecks_df <span class="token operator">=</span> df<span class="token punctuation">[</span>
+    <span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'Completed'</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> 
+    <span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">'wait_time'</span><span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">30.0</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'patient_id'</span><span class="token punctuation">,</span> <span class="token string">'doctor'</span><span class="token punctuation">,</span> <span class="token string">'department'</span><span class="token punctuation">,</span> <span class="token string">'wait_time'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Identify high-risk no-shows in specialized departments</span>
+specialty_no_shows <span class="token operator">=</span> df<span class="token punctuation">.</span>query<span class="token punctuation">(</span>
+    <span class="token string">"status == 'No-Show' and department in ['Neurology', 'Cardiology']"</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Flagged </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>specialty_no_shows<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string"> critical missed appointments"</span></span><span class="token punctuation">)</span></code></pre>
+            </div>
+          </div>
+
+          <!-- Step 3: GroupBy Aggregation -->
+          <div class="pandas-card fade-in-scroll visible">
+            <div class="pandas-card-header">
+              <div class="pandas-step-badge"><i class="fa-solid fa-layer-group"></i> Stage 03</div>
+              <h3>Multi-Metric GroupBy Aggregation</h3>
+              <p>Departmental summaries computing volume, average wait time, and billings.</p>
+            </div>
+            <div class="code-container">
+              <div class="code-header">
+                <span class="code-lang">pandas_groupby.py</span>
+                <button class="copy-btn" fdprocessedid="k6chq"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre class="language-python" tabindex="0"><code class="language-python"><span class="token comment"># Compute multi-dimensional departmental operational matrix</span>
+dept_kpi_summary <span class="token operator">=</span> df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">'department'</span><span class="token punctuation">,</span> observed<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">.</span>agg<span class="token punctuation">(</span>
+    total_appointments<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token punctuation">,</span> <span class="token string">'count'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    completed_visits<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'status'</span><span class="token punctuation">,</span> <span class="token keyword">lambda</span> s<span class="token punctuation">:</span> <span class="token punctuation">(</span>s <span class="token operator">==</span> <span class="token string">'Completed'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    no_show_count<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'status'</span><span class="token punctuation">,</span> <span class="token keyword">lambda</span> s<span class="token punctuation">:</span> <span class="token punctuation">(</span>s <span class="token operator">==</span> <span class="token string">'No-Show'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    avg_wait_minutes<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'wait_time'</span><span class="token punctuation">,</span> <span class="token keyword">lambda</span> w<span class="token punctuation">:</span> w<span class="token punctuation">[</span>w <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    total_revenue<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'fee'</span><span class="token punctuation">,</span> <span class="token string">'sum'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Add calculated completion efficiency percentage</span>
+dept_kpi_summary<span class="token punctuation">[</span><span class="token string">'completion_rate'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
+    dept_kpi_summary<span class="token punctuation">[</span><span class="token string">'completed_visits'</span><span class="token punctuation">]</span> <span class="token operator">/</span> dept_kpi_summary<span class="token punctuation">[</span><span class="token string">'total_appointments'</span><span class="token punctuation">]</span>
+<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span></code></pre>
+            </div>
+          </div>
+
+          <!-- Step 4: Time-Series & Feature Engineering -->
+          <div class="pandas-card fade-in-scroll visible">
+            <div class="pandas-card-header">
+              <div class="pandas-step-badge"><i class="fa-solid fa-calendar-days"></i> Stage 04</div>
+              <h3>Temporal Analysis &amp; Resampling</h3>
+              <p>Resampling monthly throughput trends and discovering peak weekday risk factors.</p>
+            </div>
+            <div class="code-container">
+              <div class="code-header">
+                <span class="code-lang">pandas_timeseries.py</span>
+                <button class="copy-btn" fdprocessedid="tdbycg"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre class="language-python" tabindex="0"><code class="language-python"><span class="token comment"># Time-series index conversion</span>
+ts_df <span class="token operator">=</span> df<span class="token punctuation">.</span>set_index<span class="token punctuation">(</span><span class="token string">'appointment_date'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Monthly resampled throughput and no-show counts</span>
+monthly_stats <span class="token operator">=</span> ts_df<span class="token punctuation">.</span>resample<span class="token punctuation">(</span><span class="token string">'ME'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>agg<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token string">'id'</span><span class="token punctuation">:</span> <span class="token string">'count'</span><span class="token punctuation">,</span>
+    <span class="token string">'status'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">(</span><span class="token string">'completed'</span><span class="token punctuation">,</span> <span class="token keyword">lambda</span> s<span class="token punctuation">:</span> <span class="token punctuation">(</span>s <span class="token operator">==</span> <span class="token string">'Completed'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token string">'no_show'</span><span class="token punctuation">,</span> <span class="token keyword">lambda</span> s<span class="token punctuation">:</span> <span class="token punctuation">(</span>s <span class="token operator">==</span> <span class="token string">'No-Show'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'fee'</span><span class="token punctuation">:</span> <span class="token string">'sum'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Weekday peak analysis</span>
+weekday_noshow_matrix <span class="token operator">=</span> df<span class="token punctuation">.</span>pivot_table<span class="token punctuation">(</span>
+    index<span class="token operator">=</span><span class="token string">'day_of_week'</span><span class="token punctuation">,</span>
+    columns<span class="token operator">=</span><span class="token string">'status'</span><span class="token punctuation">,</span>
+    values<span class="token operator">=</span><span class="token string">'id'</span><span class="token punctuation">,</span>
+    aggfunc<span class="token operator">=</span><span class="token string">'count'</span><span class="token punctuation">,</span>
+    fill_value<span class="token operator">=</span><span class="token number">0</span>
+<span class="token punctuation">)</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. Interactive Dashboard Section
+         ======================================================================== -->
+    <section class="section" id="dashboard">
+      <div class="container dashboard-container">
+        <div class="section-header fade-in-scroll visible" style="margin-bottom: 2rem;">
+          <div class="section-badge">Live Analytics Studio</div>
+          <h2 class="section-title">Clinical Operations Dashboard</h2>
+          <p class="section-subtitle">
+            Interact with the embedded clinical dataset in real-time. Adjust department, doctor, and date filters to observe instant recalculations and Chart.js updates.
+          </p>
+        </div>
+
+        <!-- Filter Control Bar -->
+        <div class="filter-bar fade-in-scroll visible">
+          <div class="filter-bar-header">
+            <div class="filter-title">
+              <i class="fa-solid fa-sliders" style="color:var(--primary)"></i>
+              <span>Dataset Filter Controls</span>
+            </div>
+            <span style="font-size:0.85rem; color:var(--text-muted);">Reactive Chart.js Engine</span>
+          </div>
+
+          <div class="filter-controls">
+            <!-- Filter: Department -->
+            <div class="filter-group">
+              <label for="filter-dept">Department</label>
+              <select id="filter-dept" class="filter-select" fdprocessedid="44ocxg">
+                <option value="all">All Departments</option>
+              <option value="Cardiology">Cardiology</option><option value="General Medicine">General Medicine</option><option value="Neurology">Neurology</option><option value="Oncology">Oncology</option><option value="Orthopedics">Orthopedics</option><option value="Pediatrics">Pediatrics</option></select>
+            </div>
+
+            <!-- Filter: Doctor -->
+            <div class="filter-group">
+              <label for="filter-doctor">Doctor</label>
+              <select id="filter-doctor" class="filter-select" fdprocessedid="zv86p">
+                <option value="all">All Physicians</option>
+              <option value="Dr. Aisha Patel">Dr. Aisha Patel</option><option value="Dr. David Kim">Dr. David Kim</option><option value="Dr. Emily Brooks">Dr. Emily Brooks</option><option value="Dr. Marcus Vance">Dr. Marcus Vance</option><option value="Dr. Robert Taylor">Dr. Robert Taylor</option><option value="Dr. Sarah Chen">Dr. Sarah Chen</option></select>
+            </div>
+
+            <!-- Filter: Status -->
+            <div class="filter-group">
+              <label for="filter-status">Status</label>
+              <select id="filter-status" class="filter-select" fdprocessedid="fpuoy">
+                <option value="all">All Statuses</option>
+                <option value="Completed">Completed</option>
+                <option value="No-Show">No-Show</option>
+                <option value="Cancelled">Cancelled</option>
+              </select>
+            </div>
+
+            <!-- Filter: Date Range -->
+            <div class="filter-group">
+              <label for="filter-range">Time Period</label>
+              <select id="filter-range" class="filter-select" fdprocessedid="mz5t7t">
+                <option value="all">All H1 2024</option>
+                <option value="2024-Q1">Q1 (Jan - Mar)</option>
+                <option value="2024-Q2">Q2 (Apr - Jun)</option>
+                <option value="last30">Recent (June)</option>
+              </select>
+            </div>
+
+            <!-- Reset Button -->
+            <button class="filter-reset-btn" id="filter-reset" fdprocessedid="ev4wna">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span>Reset</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic KPI Metric Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card fade-in-scroll visible">
+            <div class="kpi-icon teal"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="kpi-details">
+              <span class="kpi-label">Filtered Appointments</span>
+              <span class="kpi-value" id="kpi-total">60</span>
+              <span class="kpi-subtext"><i class="fa-solid fa-database"></i> Matches current query</span>
+            </div>
+          </div>
+
+          <div class="kpi-card fade-in-scroll visible">
+            <div class="kpi-icon rose"><i class="fa-solid fa-user-xmark"></i></div>
+            <div class="kpi-details">
+              <span class="kpi-label">No-Show Rate</span>
+              <span class="kpi-value" id="kpi-noshow">15.0%</span>
+              <span class="kpi-subtext"><i class="fa-solid fa-bell"></i> Target: &lt; 12.0%</span>
+            </div>
+          </div>
+
+          <div class="kpi-card fade-in-scroll visible">
+            <div class="kpi-icon blue"><i class="fa-solid fa-stopwatch"></i></div>
+            <div class="kpi-details">
+              <span class="kpi-label">Avg Wait Time</span>
+              <span class="kpi-value" id="kpi-wait">22.8 min</span>
+              <span class="kpi-subtext"><i class="fa-solid fa-circle-info"></i> Completed visits</span>
+            </div>
+          </div>
+
+          <div class="kpi-card fade-in-scroll visible">
+            <div class="kpi-icon amber"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <div class="kpi-details">
+              <span class="kpi-label">Total Revenue</span>
+              <span class="kpi-value" id="kpi-revenue">$13,140</span>
+              <span class="kpi-subtext"><i class="fa-solid fa-receipt"></i> Scheduled fees</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Primary Charts Grid: Dept Volume & Monthly Trends -->
+        <div class="charts-grid-main">
+          <!-- Chart 1: Appointments per Department -->
+          <div class="chart-card fade-in-scroll visible">
+            <div class="chart-card-header">
+              <div class="chart-card-title">
+                <i class="fa-solid fa-hospital-user" style="color:var(--primary)"></i>
+                <span>Appointments per Department</span>
+              </div>
+              <span class="chart-card-badge">Volume Distribution</span>
+            </div>
+            <div class="chart-container-box">
+              <canvas id="chart-dept" width="911" height="350" style="display: block; box-sizing: border-box; height: 280px; width: 729px;"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart 2: Status Breakdown -->
+          <div class="chart-card fade-in-scroll visible">
+            <div class="chart-card-header">
+              <div class="chart-card-title">
+                <i class="fa-solid fa-chart-pie" style="color:var(--secondary)"></i>
+                <span>Status Breakdown</span>
+              </div>
+              <span class="chart-card-badge">Ratio</span>
+            </div>
+            <div class="chart-container-box">
+              <canvas id="chart-status" width="424" height="350" style="display: block; box-sizing: border-box; height: 280px; width: 339px;"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Charts Grid: Trends, Doctor Workload, Wait Times -->
+        <div class="charts-grid-secondary">
+          <!-- Chart 3: Monthly Volume Trends -->
+          <div class="chart-card fade-in-scroll">
+            <div class="chart-card-header">
+              <div class="chart-card-title">
+                <i class="fa-solid fa-arrow-trend-up" style="color:var(--accent-purple)"></i>
+                <span>Monthly Trends</span>
+              </div>
+              <span class="chart-card-badge">Completed vs No-Show</span>
+            </div>
+            <div class="chart-container-box">
+              <canvas id="chart-trends" width="414" height="350" style="display: block; box-sizing: border-box; height: 280px; width: 331px;"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart 4: Doctor Workload -->
+          <div class="chart-card fade-in-scroll">
+            <div class="chart-card-header">
+              <div class="chart-card-title">
+                <i class="fa-solid fa-user-doctor" style="color:var(--secondary)"></i>
+                <span>Doctor Workload</span>
+              </div>
+              <span class="chart-card-badge">Patient Load</span>
+            </div>
+            <div class="chart-container-box">
+              <canvas id="chart-workload" width="414" height="350" style="display: block; box-sizing: border-box; height: 280px; width: 331px;"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart 5: Average Wait Time by Department -->
+          <div class="chart-card fade-in-scroll">
+            <div class="chart-card-header">
+              <div class="chart-card-title">
+                <i class="fa-solid fa-clock" style="color:var(--primary)"></i>
+                <span>Wait Time by Specialty</span>
+              </div>
+              <span class="chart-card-badge">Minutes</span>
+            </div>
+            <div class="chart-container-box">
+              <canvas id="chart-wait-time" width="414" height="350" style="display: block; box-sizing: border-box; height: 280px; width: 331px;"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Tabular Data Preview -->
+        <div class="dataset-container fade-in-scroll" style="margin-top:1rem;">
+          <div class="dataset-header">
+            <div>
+              <h3><i class="fa-solid fa-table-list" style="color:var(--primary); margin-right:0.5rem"></i> Filtered Records Preview</h3>
+              <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.25rem;">
+                Displaying live subset of records responding to active filter criteria.
+              </p>
+            </div>
+            <div class="table-actions">
+              <button class="btn btn-primary btn-sm" id="btn-open-modal" fdprocessedid="49g3g7">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add Appointment</span>
+              </button>
+              <button class="btn btn-secondary btn-sm" id="btn-export-csv" title="Export current filtered records as CSV" fdprocessedid="rp8lft">
+                <i class="fa-solid fa-file-csv"></i>
+                <span>Export CSV</span>
+              </button>
+              <button class="btn btn-secondary btn-sm" id="btn-export-json" title="Export current filtered records as JSON" fdprocessedid="91d7vn">
+                <i class="fa-solid fa-file-code"></i>
+                <span>Export JSON</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Table Search Toolbar -->
+          <div class="table-toolbar">
+            <div class="table-search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="table-search" class="table-search-input" placeholder="Search patient ID, doctor, or department..." fdprocessedid="unnnub">
+            </div>
+            <span class="badge-tag type-str" id="record-count-badge"><i class="fa-solid fa-database"></i> 60 Filtered</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="dataset-table">
+              <thead>
+                <tr>
+                  <th>Apt ID</th>
+                  <th>Patient ID</th>
+                  <th>Doctor</th>
+                  <th>Department</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Wait Time</th>
+                  <th>Billing Fee</th>
+                </tr>
+              </thead>
+              <tbody id="dataset-table-body"><tr>
+        <td><code>APT-1001</code></td>
+        <td><strong>P-101</strong></td>
+        <td>Dr. Sarah Chen</td>
+        <td><span class="badge-tag type-str">Cardiology</span></td>
+        <td>2024-01-05</td>
+        <td><span class="status-pill status-completed"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> Completed</span></td>
+        <td><strong>18 min</strong></td>
+        <td>$250.00</td>
+      </tr><tr>
+        <td><code>APT-1002</code></td>
+        <td><strong>P-102</strong></td>
+        <td>Dr. Marcus Vance</td>
+        <td><span class="badge-tag type-str">Neurology</span></td>
+        <td>2024-01-08</td>
+        <td><span class="status-pill status-completed"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> Completed</span></td>
+        <td><strong>32 min</strong></td>
+        <td>$300.00</td>
+      </tr><tr>
+        <td><code>APT-1003</code></td>
+        <td><strong>P-103</strong></td>
+        <td>Dr. Emily Brooks</td>
+        <td><span class="badge-tag type-str">Pediatrics</span></td>
+        <td>2024-01-11</td>
+        <td><span class="status-pill status-noshow"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> No-Show</span></td>
+        <td><strong>—</strong></td>
+        <td>$150.00</td>
+      </tr><tr>
+        <td><code>APT-1004</code></td>
+        <td><strong>P-104</strong></td>
+        <td>Dr. Robert Taylor</td>
+        <td><span class="badge-tag type-str">Orthopedics</span></td>
+        <td>2024-01-15</td>
+        <td><span class="status-pill status-completed"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> Completed</span></td>
+        <td><strong>28 min</strong></td>
+        <td>$220.00</td>
+      </tr><tr>
+        <td><code>APT-1005</code></td>
+        <td><strong>P-105</strong></td>
+        <td>Dr. Aisha Patel</td>
+        <td><span class="badge-tag type-str">General Medicine</span></td>
+        <td>2024-01-18</td>
+        <td><span class="status-pill status-completed"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> Completed</span></td>
+        <td><strong>14 min</strong></td>
+        <td>$120.00</td>
+      </tr><tr>
+        <td><code>APT-1006</code></td>
+        <td><strong>P-106</strong></td>
+        <td>Dr. David Kim</td>
+        <td><span class="badge-tag type-str">Oncology</span></td>
+        <td>2024-01-22</td>
+        <td><span class="status-pill status-completed"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> Completed</span></td>
+        <td><strong>22 min</strong></td>
+        <td>$350.00</td>
+      </tr><tr>
+        <td><code>APT-1007</code></td>
+        <td><strong>P-107</strong></td>
+        <td>Dr. Sarah Chen</td>
+        <td><span class="badge-tag type-str">Cardiology</span></td>
+        <td>2024-01-26</td>
+        <td><span class="status-pill status-cancelled"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> Cancelled</span></td>
+        <td><strong>—</strong></td>
+        <td>$250.00</td>
+      </tr><tr>
+        <td><code>APT-1008</code></td>
+        <td><strong>P-108</strong></td>
+        <td>Dr. Emily Brooks</td>
+        <td><span class="badge-tag type-str">Pediatrics</span></td>
+        <td>2024-01-29</td>
+        <td><span class="status-pill status-completed"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> Completed</span></td>
+        <td><strong>12 min</strong></td>
+        <td>$150.00</td>
+      </tr></tbody>
+            </table>
+          </div>
+
+          <!-- Table Pagination Controls -->
+          <div class="table-pagination">
+            <span id="pagination-info">Showing 1 to 8 of 60 records (Page 1 of 8)</span>
+            <div class="pagination-btn-group">
+              <button class="pagination-btn" id="btn-prev-page" disabled="">
+                <i class="fa-solid fa-chevron-left"></i> Previous
+              </button>
+              <button class="pagination-btn" id="btn-next-page" fdprocessedid="h8xb07j">
+                Next <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. Key Insights Section
+         ======================================================================== -->
+    <section class="section section-alt" id="insights">
+      <div class="container">
+        <div class="section-header fade-in-scroll">
+          <div class="section-badge">Data-Driven Discoveries</div>
+          <h2 class="section-title">Key Analytical Insights</h2>
+          <p class="section-subtitle">
+            Critical observations extracted from multi-dimensional aggregation across clinical specialties, scheduling windows, and patient adherence records.
+          </p>
+        </div>
+
+        <div class="insights-grid">
+          <!-- Insight 1: Peak No-Show Patterns -->
+          <div class="insight-card fade-in-scroll">
+            <div class="insight-header">
+              <div class="insight-icon-wrap rose"><i class="fa-solid fa-calendar-xmark"></i></div>
+              <div class="insight-title">Peak No-Show Rate</div>
+            </div>
+            <div class="insight-metric">23.8%</div>
+            <div class="insight-body">
+              Monday mornings and Friday afternoon appointment slots exhibit significantly elevated rates of absenteeism compared to midweek intervals (Tue–Thu avg: 11.4%).
+            </div>
+            <div class="insight-recommendation">
+              <strong>Clinical Action</strong>
+              Deploy automated SMS and phone call reminders 24 hours prior to Monday morning consultations.
+            </div>
+          </div>
+
+          <!-- Insight 2: Busiest Departments -->
+          <div class="insight-card fade-in-scroll">
+            <div class="insight-header">
+              <div class="insight-icon-wrap teal"><i class="fa-solid fa-stethoscope"></i></div>
+              <div class="insight-title">Highest Patient Volume</div>
+            </div>
+            <div class="insight-metric">42.5%</div>
+            <div class="insight-body">
+              General Medicine and Pediatrics account for over 42% of total clinical traffic, creating chronic check-in queue congestion during morning hours.
+            </div>
+            <div class="insight-recommendation">
+              <strong>Clinical Action</strong>
+              Introduce staggered 15-minute staggered arrival windows and self-service kiosk check-in.
+            </div>
+          </div>
+
+          <!-- Insight 3: Wait Time Bottlenecks -->
+          <div class="insight-card fade-in-scroll">
+            <div class="insight-header">
+              <div class="insight-icon-wrap amber"><i class="fa-solid fa-hourglass-half"></i></div>
+              <div class="insight-title">Wait Time Disparity</div>
+            </div>
+            <div class="insight-metric">34.2 min</div>
+            <div class="insight-body">
+              Orthopedics recorded the longest average patient wait time (34.2 mins) — more than double General Medicine (14.1 mins) — driven by complex diagnostic imaging reviews.
+            </div>
+            <div class="insight-recommendation">
+              <strong>Clinical Action</strong>
+              Pre-buffer imaging review buffers (10 mins) prior to patient arrival in specialized clinics.
+            </div>
+          </div>
+
+          <!-- Insight 4: Clinician Capacity Variance -->
+          <div class="insight-card fade-in-scroll">
+            <div class="insight-header">
+              <div class="insight-icon-wrap blue"><i class="fa-solid fa-user-doctor"></i></div>
+              <div class="insight-title">Capacity Asymmetry</div>
+            </div>
+            <div class="insight-metric">Δ 38%</div>
+            <div class="insight-body">
+              Significant workload variation observed: senior specialists average 12 consultations/day, while junior clinic staff average 7, leading to scheduling inefficiencies.
+            </div>
+            <div class="insight-recommendation">
+              <strong>Clinical Action</strong>
+              Implement dynamic load-balancing in appointment dispatch algorithms.
+            </div>
+          </div>
+
+          <!-- Insight 5: Financial Impact of Missed Slots -->
+          <div class="insight-card fade-in-scroll">
+            <div class="insight-header">
+              <div class="insight-icon-wrap purple"><i class="fa-solid fa-sack-dollar"></i></div>
+              <div class="insight-title">Unrealized Revenue</div>
+            </div>
+            <div class="insight-metric">$34,800/yr</div>
+            <div class="insight-body">
+              Extrapolated financial analysis indicates annualized revenue losses of $34,800 per physician resulting from unbilled, non-rescheduled no-show appointment slots.
+            </div>
+            <div class="insight-recommendation">
+              <strong>Clinical Action</strong>
+              Institute a refundable 24-hour cancellation deposit policy and automated waitlist backfilling.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. Tech Stack Section
+         ======================================================================== -->
+    <section class="section" id="tech-stack">
+      <div class="container">
+        <div class="section-header fade-in-scroll">
+          <div class="section-badge">Core Technologies</div>
+          <h2 class="section-title">The Engineering &amp; Analytics Stack</h2>
+          <p class="section-subtitle">
+            Engineered with industry-standard Python data libraries and modern, dependency-free web technologies.
+          </p>
+        </div>
+
+        <div class="tech-stack-grid">
+          <!-- Python -->
+          <div class="tech-card fade-in-scroll">
+            <div class="tech-icon-container"><i class="fa-brands fa-python"></i></div>
+            <div class="tech-name">Python</div>
+            <div class="tech-version">v3.11+</div>
+            <div class="tech-desc">Core language powering OOP domain architecture, strict dataclasses, and abstract base classes.</div>
+          </div>
+
+          <!-- Pandas -->
+          <div class="tech-card fade-in-scroll">
+            <div class="tech-icon-container"><i class="fa-solid fa-table-columns"></i></div>
+            <div class="tech-name">Pandas</div>
+            <div class="tech-version">v2.2+</div>
+            <div class="tech-desc">Vectorized Series and DataFrame manipulation, temporal resampling, multi-index aggregation, and cleaning.</div>
+          </div>
+
+          <!-- NumPy -->
+          <div class="tech-card fade-in-scroll">
+            <div class="tech-icon-container"><i class="fa-solid fa-calculator"></i></div>
+            <div class="tech-name">NumPy</div>
+            <div class="tech-version">v1.26+</div>
+            <div class="tech-desc">Underlying C-speed numeric arrays, boolean masks, matrix calculations, and statistical functions.</div>
+          </div>
+
+          <!-- Matplotlib / Jupyter -->
+          <div class="tech-card fade-in-scroll">
+            <div class="tech-icon-container"><i class="fa-solid fa-chart-area"></i></div>
+            <div class="tech-name">Matplotlib</div>
+            <div class="tech-version">v3.8+</div>
+            <div class="tech-desc">Publication-ready exploratory visualizations and interactive Jupyter Notebook analysis workflows.</div>
+          </div>
+
+          <!-- Chart.js & Vanilla Web -->
+          <div class="tech-card fade-in-scroll">
+            <div class="tech-icon-container"><i class="fa-brands fa-js"></i></div>
+            <div class="tech-name">Chart.js &amp; Web</div>
+            <div class="tech-version">HTML5/CSS3/ES6</div>
+            <div class="tech-desc">Zero-dependency, high-performance responsive frontend with reactive Canvas rendering and dark mode.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. Conclusion & Future Scope Section
+         ======================================================================== -->
+    <section class="section section-alt" id="future-scope">
+      <div class="container">
+        <div class="section-header fade-in-scroll">
+          <div class="section-badge">Roadmap &amp; Next Steps</div>
+          <h2 class="section-title">Conclusion &amp; Future Scope</h2>
+          <p class="section-subtitle">
+            Expanding the analytical foundation into production machine learning, automated rescheduling agents, and clinical EHR interoperability.
+          </p>
+        </div>
+
+        <div class="conclusion-grid">
+          <!-- Project Summary -->
+          <div class="scope-card fade-in-scroll">
+            <div class="scope-card-header">
+              <div class="scope-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+              <h3>Project Conclusion</h3>
+            </div>
+            <p style="color:var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+              This project successfully demonstrates the synergy of Object-Oriented software engineering and modern Pandas data analytics. By modeling business entities into explicit classes (<code style="font-family:var(--font-mono)">Patient</code>, <code style="font-family:var(--font-mono)">Doctor</code>, <code style="font-family:var(--font-mono)">Appointment</code>), business rules remain tightly encapsulated, while the vectorized <code style="font-family:var(--font-mono)">HospitalAnalyzer</code> pipeline delivers lightning-fast multi-dimensional KPI discovery for hospital administrators.
+            </p>
+            <div class="scope-items">
+              <div class="scope-item">
+                <div class="scope-bullet"><i class="fa-solid fa-check"></i></div>
+                <div class="scope-text">
+                  <h4>Modular Architecture</h4>
+                  <p>Encapsulated entities make adding billing codes or insurance providers effortless without breaking ETL scripts.</p>
+                </div>
+              </div>
+              <div class="scope-item">
+                <div class="scope-bullet"><i class="fa-solid fa-check"></i></div>
+                <div class="scope-text">
+                  <h4>Actionable Clinical Visibility</h4>
+                  <p>Transparent identification of bottleneck departments directly informs staffing and facility decisions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Future Innovations Roadmap -->
+          <div class="scope-card fade-in-scroll">
+            <div class="scope-card-header">
+              <div class="scope-icon"><i class="fa-solid fa-rocket"></i></div>
+              <h3>Future Innovations &amp; Scope</h3>
+            </div>
+            <div class="scope-items">
+              <div class="scope-item">
+                <div class="scope-bullet">1</div>
+                <div class="scope-text">
+                  <h4>Predictive No-Show Modeling (ML)</h4>
+                  <p>Train Scikit-Learn / XGBoost classification models utilizing lead time, historical no-show ratios, weather forecasts, and distance to predict attendance probabilities.</p>
+                </div>
+              </div>
+
+              <div class="scope-item">
+                <div class="scope-bullet">2</div>
+                <div class="scope-text">
+                  <h4>Dynamic Overbooking &amp; Queue Optimization</h4>
+                  <p>Implement genetic scheduling algorithms that intelligently double-book slots only when the combined predicted show probability is below 50%.</p>
+                </div>
+              </div>
+
+              <div class="scope-item">
+                <div class="scope-bullet">3</div>
+                <div class="scope-text">
+                  <h4>EHR / FHIR HL7 Clinical API Sync</h4>
+                  <p>Integrate with Fast Healthcare Interoperability Resources (FHIR) standard endpoints for live streaming hospital telemetry.</p>
+                </div>
+              </div>
+
+              <div class="scope-item">
+                <div class="scope-bullet">4</div>
+                <div class="scope-text">
+                  <h4>Automated Patient Re-booking Bot</h4>
+                  <p>Conversational SMS and WhatsApp agent that instantly offers newly opened cancellation slots to waitlisted patients.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Predictive ML No-Show Risk Simulator -->
+        <div class="ml-simulator-container fade-in-scroll">
+          <div class="ml-simulator-header">
+            <div class="section-badge"><i class="fa-solid fa-microchip"></i> Live ML Prototype</div>
+            <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--text-main); margin: 0.5rem 0;">Predictive Patient No-Show Estimator</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Simulating a trained Logistic Classification model on appointment features to forecast absenteeism risk in real time.
+            </p>
+          </div>
+          <div class="ml-simulator-grid">
+            <div class="ml-controls-card">
+              <!-- Lead Time Slider -->
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <label class="form-label" for="ml-lead-time">Booking Lead Time</label>
+                  <span style="font-weight:700; color:var(--primary); font-family:var(--font-mono)" id="ml-lead-val">14 Days</span>
+                </div>
+                <input type="range" id="ml-lead-time" min="1" max="45" value="14" class="slider-input">
+              </div>
+
+              <!-- Prior Missed Visits -->
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <label class="form-label" for="ml-prior">Prior Missed Appointments</label>
+                  <span style="font-weight:700; color:var(--primary); font-family:var(--font-mono)" id="ml-prior-val">1 Missed</span>
+                </div>
+                <input type="range" id="ml-prior" min="0" max="5" value="1" class="slider-input">
+              </div>
+
+              <!-- Day of Week & Specialty -->
+              <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+                <div class="form-group">
+                  <label class="form-label" for="ml-day">Appointment Day</label>
+                  <select id="ml-day" class="form-input" fdprocessedid="ocd32i">
+                    <option value="Monday" selected="">Monday (High Risk)</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday (High Risk)</option>
+                    <option value="Saturday">Saturday</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ml-dept">Clinical Specialty</label>
+                  <select id="ml-dept" class="form-input" fdprocessedid="3p49o8">
+                    <option value="General Medicine">General Medicine</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Pediatrics" selected="">Pediatrics</option>
+                    <option value="Orthopedics">Orthopedics</option>
+                    <option value="Oncology">Oncology</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Reminder Toggle -->
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <input type="checkbox" id="ml-reminder" checked="" style="width:1.2rem; height:1.2rem; accent-color:var(--primary);">
+                <label for="ml-reminder" style="font-size:0.9rem; font-weight:600; color:var(--text-main); cursor:pointer;">
+                  Send Automated SMS &amp; WhatsApp Confirmation (-35% Risk)
+                </label>
+              </div>
+            </div>
+
+            <!-- Prediction Result Card -->
+            <div class="ml-result-card" id="ml-result-box" style="border-color: rgb(245, 158, 11);">
+              <div class="ml-result-badge ml-risk-moderate" id="ml-risk-badge">Moderate Risk</div>
+              <div class="ml-result-score" id="ml-prob-display">37.3%</div>
+              <div style="font-size: 0.8rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; margin-bottom: 0.75rem;">
+                Calculated Absenteeism Probability
+              </div>
+              <div class="ml-result-recommendation" id="ml-action-text">
+                <strong>Recommended Clinical Action:</strong>
+                <span id="ml-action-desc">Automated WhatsApp prompt + 24-hour staff telephone confirmation recommended.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       10. Footer Section
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="http://localhost:8000/index.html#" class="nav-brand" style="font-size:1.35rem">
+            <div class="nav-brand-icon">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <span>Medi<span>Pulse</span> Analytics</span>
+          </a>
+          <p style="color:var(--text-muted); font-size:0.875rem; max-width:420px; margin-top:0.5rem">
+            Hospital Appointment Analysis using OOP &amp; Pandas. Developed as an educational reference architecture and portfolio demonstration.
+          </p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:contact@hospitalanalysis.dev" class="social-link" title="Contact Author" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2024–2026 <strong>Partheep M</strong>. All rights reserved. Open-source educational showcase.
+        </div>
+        <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+          <span>Back to Top</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       11. Add Appointment Modal (Tests OOP Encapsulation & Validation)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="appointment-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-solid fa-calendar-plus" style="color:var(--primary)"></i>
+          <span>Schedule New Clinical Appointment</span>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <form id="appointment-form">
+        <div class="modal-body">
+          <div class="modal-form-grid">
+            <!-- Patient ID -->
+            <div class="form-group">
+              <label class="form-label" for="modal-patient-id">Patient ID</label>
+              <input type="text" id="modal-patient-id" class="form-input" placeholder="e.g. P-161" required="">
+            </div>
+
+            <!-- Doctor Selector -->
+            <div class="form-group">
+              <label class="form-label" for="modal-doctor">Attending Physician</label>
+              <select id="modal-doctor" class="form-input" required="">
+                <option value="Dr. Sarah Chen">Dr. Sarah Chen (Cardiology)</option>
+                <option value="Dr. Marcus Vance">Dr. Marcus Vance (Neurology)</option>
+                <option value="Dr. Emily Brooks">Dr. Emily Brooks (Pediatrics)</option>
+                <option value="Dr. Robert Taylor">Dr. Robert Taylor (Orthopedics)</option>
+                <option value="Dr. Aisha Patel">Dr. Aisha Patel (General Medicine)</option>
+                <option value="Dr. David Kim">Dr. David Kim (Oncology)</option>
+              </select>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+              <label class="form-label" for="modal-date">Appointment Date</label>
+              <input type="date" id="modal-date" class="form-input" value="2024-06-30" required="">
+            </div>
+
+            <!-- Status -->
+            <div class="form-group">
+              <label class="form-label" for="modal-status">Status Lifecycle</label>
+              <select id="modal-status" class="form-input" required="">
+                <option value="Completed">Completed</option>
+                <option value="No-Show">No-Show</option>
+                <option value="Cancelled">Cancelled</option>
+              </select>
+            </div>
+
+            <!-- Wait Time (Tests Encapsulation setter) -->
+            <div class="form-group">
+              <label class="form-label" for="modal-wait-time">Wait Time (Minutes)</label>
+              <input type="number" id="modal-wait-time" class="form-input" placeholder="e.g. 15" min="0" step="1" value="15">
+              <span class="form-error" id="wait-time-error">Wait time cannot be negative (OOP ValueError)</span>
+            </div>
+
+            <!-- Fee -->
+            <div class="form-group">
+              <label class="form-label" for="modal-fee">Consultation Fee ($)</label>
+              <input type="number" id="modal-fee" class="form-input" placeholder="e.g. 250" min="0" step="10" value="250" required="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" id="modal-cancel-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-check"></i>
+            <span>Validate &amp; Ingest</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts: Chart.js & Prism.js CDN, followed by app.js -->
+  <script src="./Hospital Appointment Analysis using OOP &amp; Pandas_files/chart.umd.min.js.download"></script>
+  <script src="./Hospital Appointment Analysis using OOP &amp; Pandas_files/prism.min.js.download"></script>
+  <script src="./Hospital Appointment Analysis using OOP &amp; Pandas_files/prism-python.min.js.download"></script>
+  <script src="./Hospital Appointment Analysis using OOP &amp; Pandas_files/app.js.download"></script>
+
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
